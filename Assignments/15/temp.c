@@ -2,6 +2,6 @@
 int main()
 {
 	int x=5;
-	printf("%d",x);
+	printf("%d",x*x+1);
 	return 0;
 }

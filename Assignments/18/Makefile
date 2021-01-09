@@ -1,12 +1,16 @@
-SRC = *.c
+all: shm-read.c shm-write.c
 
-INC = *.h
+read: shm_read.c shm.h
+	gcc -o shm_read.out shm_read.c -lrt
+	
+write: shm_write.c shm.h
+	gcc -o shm_write.out shm_write.c -lrt
+	
+runread:
+	./shm_read.out
 
-all: $(SRC)
-	gcc $(SRC) $(INC) -lpthread -o a.out -lrt
-
-run:
-	./a.out
+runwrite:
+	./shm_write.out
 
 clean:
 	rm -rf *.out *.o

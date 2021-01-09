@@ -1,6 +1,6 @@
 #include "stack_sem.h"
 
-//const int max=10;
+
 int m_arr[20];
 int m_top=-1;
 sem_t *qs,*ps;
@@ -34,8 +34,8 @@ int main()
 	pthread_join(pt2, NULL );
    sem_unlink("s1");
 		sem_unlink("s2");
-   // pthread_mutex_destroy(&m1);
-	//printf("VAlue:%d",value);
+   pthread_mutex_destroy(&m1);
+	
 	return 0;	//exit(0);
 	
 	}

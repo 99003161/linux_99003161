@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<time.h>
+#include "times.h"
 
 int main()
 {
